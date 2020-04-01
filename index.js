@@ -3,13 +3,14 @@
 // Release 0
 console.log("Linear Search");
 let linearSearch = (target, values) => {
-  var index = 0;
+  var index;
   for (var i = 0; i < values.length; i++) {
     if (target == values[i]) {
-      index += 1;
+      index = i;
+      break
     }
   }
-  if (index == 0) {
+  if (index == undefined) {
     return -1;
   }
   return index;
